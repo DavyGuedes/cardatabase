@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CardatabaseApplication",
+            "request": "launch",
+            "mainClass": "br.ufc.alu.cardatabase.CardatabaseApplication",
+            "projectName": "cardatabase"
+        }
+    ]
+}

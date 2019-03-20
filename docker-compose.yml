@@ -1,0 +1,20 @@
+version: '2.1'
+
+services:
+  cardatabase:
+    image: cardatabase
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USER: root
+      DATABASE_PASSWORD: root
+      DATABASE_NAME: cardatabase 
+      DATABASE_PORT: 3306
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cardatabase
+      #ports: 3306:3306
