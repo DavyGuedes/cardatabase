@@ -6,6 +6,11 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-  <include file="changelog/01-create-user-schema.xml" relativeToChangelogFile="true"/>
-  <include file="changelog/02-add-auto-increment-for-id-in-user-schema.xml" relativeToChangelogFile="true"/>
+    <changeSet author="davyguedes" id="2">
+        <addAutoIncrement
+            columnDataType="bigint"
+            columnName="id"
+            incrementBy="1"
+            tableName="user"/>
+    </changeSet>
 </databaseChangeLog>
