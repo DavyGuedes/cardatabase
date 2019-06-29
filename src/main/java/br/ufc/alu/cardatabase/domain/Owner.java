@@ -27,5 +27,10 @@ public class Owner {
     private String fisrtname, lastname;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private List<Car> cars;
-    
+
+    public Owner(String fisrtname, String lastname, List<Car> cars) {
+        this.fisrtname = fisrtname;
+        this.lastname = lastname;
+        this.cars = cars;
+    }
 }

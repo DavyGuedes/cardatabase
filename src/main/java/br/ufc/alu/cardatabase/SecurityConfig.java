@@ -1,4 +1,4 @@
-package br.ufc.alu.cardatabase.config;
+package br.ufc.alu.cardatabase;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
