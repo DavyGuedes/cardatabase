@@ -32,7 +32,8 @@ public class Car {
     @JoinColumn(name = "owner")
     private Owner owner;
 
-    public Car(String brand, String model, String color, String registerNumber, Integer year, Integer price, Owner owner) {
+    public Car(Long id, String brand, String model, String color, String registerNumber, Integer year, Integer price, Owner owner) {
+        this.id = id;
         this.brand = brand;
         this.model = model;
         this.color = color;
@@ -41,4 +42,9 @@ public class Car {
         this.price = price;
         this.owner = owner;
     }
+
+
+    public Car() {
+    }
+
 }
