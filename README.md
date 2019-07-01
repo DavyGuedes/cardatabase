@@ -17,7 +17,7 @@ Projeto de exemplo usando Spring Data REST, construída no decorrer do livro de 
 
 ## Utilização e build
 
-Após a inicialização da aplicação, independente da forma, a mesma pode ser acessada ou ter a sua documentação acessada pelo link `http://localhost:PORTA_INICIADA/swagger-ui.html`, exemplo: `http://localhost:9999/swagger-ui.html`.
+Após a inicialização da aplicação, independente da forma, a mesma pode ser acessada ou ter a sua documentação acessada pelo link `http://localhost:PORTA_INICIADA/swagger-ui.html`, exemplo: `http://localhost:8080/swagger-ui.html`.
 
 ### Build usando artefatos locais (GIT)
 
@@ -43,7 +43,7 @@ docker build -t marcosdavy/cardatabase:latest .
 docker run -d -p 8080:8080 marcosdavy/cardatabase:latest
 ```
 
-**OBS:** Com esses comandos a aplicação será iniciada, na porta 8080,  mas isso pode ser alterado, informando o parâmetro docker: `-p $PORTA_DESEJADA:9999`.
+**OBS:** Com esses comandos a aplicação será iniciada, na porta 8080,  mas isso pode ser alterado, informando o parâmetro docker: `-p $PORTA_DESEJADA:8080`.
 
 ### Utilização com Docker (imagem remota do DockerHub)
 
@@ -52,7 +52,7 @@ docker run -d -p 8080:8080 marcosdavy/cardatabase:latest
 docker run -d -p 8080:8080 marcosdavy/cardatabase:latest
 ```
 
-**OBS:** Com esse comando a aplicação será iniciada, na porta 8080, mas isso pode ser alterado, informando o parâmetro docker: `-p $PORTA_DESEJADA:9999`.
+**OBS:** Com esse comando a aplicação será iniciada, na porta 8080, mas isso pode ser alterado, informando o parâmetro docker: `-p $PORTA_DESEJADA:8080`.
 
 ## Arquivo e artefatos do projeto
 
