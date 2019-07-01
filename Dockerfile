@@ -28,7 +28,7 @@ RUN \
 
 FROM base AS exec
 
-COPY --from=build /data/app.jar app.jar
+COPY --from=build /app/app.jar app.jar
 
 ARG PROFILES
 ARG PORTs
