@@ -1,9 +1,2 @@
 language: java
-jdk: oraclejdk8
-env:
-  - DB=cardatabase
-
-services:
-  - mysql
-script:
-- ./mvnw clean install
+jdk: oraclejdk11

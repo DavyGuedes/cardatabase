@@ -1,0 +1,9 @@
+package br.ufc.alu.cardatabase.domain;
+
+import br.ufc.alu.cardatabase.domain.Owner;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+@RepositoryRestResource
+public interface OwnerRepository extends JpaRepository<Owner, Long> {
+}
