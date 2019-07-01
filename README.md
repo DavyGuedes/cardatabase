@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/davyguedes/cardatabase.svg?branch=master)](https://travis-ci.org/davyguedes/cardatabase)
 
-Projeto de exemplo usando Spring Data REST, construída no decorrer do livro de Juha Hinkula, [Hands-On Full Stack Development with Spring Booot 2.0 and React](https://www.amazon.com/Hands-Stack-Development-Spring-React/dp/1789138086/), com algumas alterações.
+Projeto em desenvolvimento de uma aplicação usando Spring Data REST, baseada na aplicação construída no decorrer do livro de Juha Hinkula, [Hands-On Full Stack Development with Spring Booot 2.0 and React](https://www.amazon.com/Hands-Stack-Development-Spring-React/dp/1789138086/), com algumas alterações.
 
 ## Tecnologias utilizadas
 
