@@ -9,7 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Owner entity table
@@ -18,7 +20,7 @@ import lombok.Data;
  */
 
 @Entity
-@Data
+@Data @NoArgsConstructor @AllArgsConstructor
 public class Owner {
 
     @Id
@@ -28,15 +30,6 @@ public class Owner {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private List<Car> cars;
 
-    public Owner(Long id, String fisrtname, String lastname, List<Car> cars) {
-        this.id = id;
-        this.fisrtname = fisrtname;
-        this.lastname = lastname;
-        this.cars = cars;
-    }
 
-
-    public Owner() {
-    }
 
 }

@@ -8,7 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Car entity table
@@ -17,7 +19,7 @@ import lombok.Data;
  */
 
 @Entity
-@Data
+@Data @NoArgsConstructor @AllArgsConstructor
 public class Car {
 
     @Id
@@ -31,20 +33,5 @@ public class Car {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner")
     private Owner owner;
-
-    public Car(Long id, String brand, String model, String color, String registerNumber, Integer year, Integer price, Owner owner) {
-        this.id = id;
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-        this.registerNumber = registerNumber;
-        this.year = year;
-        this.price = price;
-        this.owner = owner;
-    }
-
-
-    public Car() {
-    }
 
 }

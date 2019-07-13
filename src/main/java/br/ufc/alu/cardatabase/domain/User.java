@@ -9,7 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import br.ufc.alu.cardatabase.domain.enums.Role;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * User entity table
@@ -18,7 +20,7 @@ import lombok.Data;
  */
 
 @Entity
-@Data
+@Data @NoArgsConstructor @AllArgsConstructor
 public class User {
 
     @Id
@@ -35,16 +37,4 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-
-    public User(Long id, String username, String password, Role role) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.role = role;
-    }
-    
-
-    public User() {
-
-    }
 }

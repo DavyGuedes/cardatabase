@@ -1,4 +1,4 @@
-package br.ufc.alu.cardatabase.domain;
+package br.ufc.alu.cardatabase.repository;  
 
 import java.util.List;
 import java.util.Optional;

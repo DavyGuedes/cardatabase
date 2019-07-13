@@ -2,8 +2,8 @@ package br.ufc.alu.cardatabase;
 
 import br.ufc.alu.cardatabase.domain.Car;
 import br.ufc.alu.cardatabase.domain.Owner;
-import br.ufc.alu.cardatabase.domain.CarRepository;
-import br.ufc.alu.cardatabase.domain.OwnerRepository;
+import br.ufc.alu.cardatabase.repository.CarRepository;
+import br.ufc.alu.cardatabase.repository.OwnerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
