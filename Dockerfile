@@ -12,15 +12,20 @@ WORKDIR /app
 # Imagem de build com maven
 ####################################################################################
 
-FROM base AS build
+FROM maven:3-jdk-11-slim as build
 
-ADD . .
+WORKDIR /build
+
+COPY pom.xml .
+RUN mvn dependency:go-offline
+
+COPY src/ /build/src/
 
 ARG ADDITIONAL_TASK_MAVEN
 
 RUN \
-    ./mvnw clean install ${ADDITIONAL_TASK_MAVEN} && \
-    mv target/*.jar app.jar
+    mvn clean install ${ADDITIONAL_TASK_MAVEN} && \
+    mv /build/target/*.jar app.jar
 
 ####################################################################################
 # Imagem da execução da aplicação
@@ -28,7 +33,7 @@ RUN \
 
 FROM base AS exec
 
-COPY --from=build /app/app.jar app.jar
+COPY --from=build /build/app.jar app.jar
 
 ARG PROFILES
 ARG PORTs
